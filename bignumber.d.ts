@@ -323,7 +323,7 @@ export class BigNumber {
      * The remainder is always positive. Euclidian division: `q = sign(n) * floor(a / abs(n))`
      */
     static EUCLID: RoundingMode;
-
+    
     /**
      * Returns a new independent BigNumber constructor with configuration as described by `obj` (see `config`), or with
      * the default configuration if `obj` is `null` or `undefined`.
@@ -524,6 +524,11 @@ export class BigNumber {
      */
     constructor(value: number | string | BigNumber, base?: number);
 
+    /*
+     * Always true.
+     */
+     isBigNumber: boolean;
+     
     /**
      * Returns a BigNumber whose value is the absolute value, i.e. the magnitude, of the value of this BigNumber. The
      * return value is always exact and unrounded.
